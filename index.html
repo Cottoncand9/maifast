@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mai Fast | กล่องสุ่ม การ์ด ของเล่น</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                🌱
+            </div>
+
+            <div>
+                <h2>mai fast</h2>
+                <small>กล่องสุ่ม • การ์ด • ของเล่น</small>
+            </div>
+
+        </div>
+
+
+        <nav class="side-menu">
+
+            <button class="nav-btn active" data-page="home">
+                🏠
+                <span>หน้าหลัก</span>
+            </button>
+
+            <button class="nav-btn" data-page="products">
+                📦
+                <span>สินค้า</span>
+            </button>
+
+            <button class="nav-btn" data-page="inventory">
+                🏬
+                <span>คลังสินค้า</span>
+            </button>
+
+            <button class="nav-btn" data-page="shipping">
+                🚚
+                <span>ขนส่ง</span>
+            </button>
+
+            <button class="nav-btn" data-page="tax">
+                🧾
+                <span>ภาษีและราคา</span>
+            </button>
+
+            <button class="nav-btn" data-page="orders">
+                📋
+                <span>คำสั่งซื้อ</span>
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button id="themeButton" class="theme-button">
+                🌙 Dark Mode
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="header-left">
+
+                <button id="mobileMenu" class="mobile-menu">
+                    ☰
+                </button>
+
+                <div>
+
+                    <h1 id="pageTitle">
+                        หน้าหลัก
+                    </h1>
+
+                    <p id="pageSubtitle">
+                        เปิดกล่องความสุขทุกวันกับ mai fast
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <div class="date">
+                    📅
+                    <span id="today"></span>
+                </div>
+
+
+                <button id="cartButton" class="cart-button">
+
+                    🛒
+
+                    <span>
+                        ตะกร้า
+                    </span>
+
+                    <b id="cartCount">
+                        0
+                    </b>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= HOME ================= -->
+
+        <section id="home" class="page active">
+
+
+            <!-- HERO -->
+
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <span class="hero-tag">
+                        ✨ MAI FAST
+                    </span>
+
+                    <h2>
+                        กล่องสุ่ม การ์ด<br>
+                        และของเล่นน่ารัก ๆ
+                    </h2>
+
+                    <p>
+                        เปิดกล่องความสุข
+                        ทุกการสะสมของคุณ
+                    </p>
+
+                    <button
+                        class="hero-button"
+                        data-page="products">
+
+                        🛍️ ดูสินค้าทั้งหมด
+
+                    </button>
+
+                </div>
+
+
+                <div class="hero-art">
+
+                    <div class="big-box">
+
+                        <div class="box-face">
+
+                            <span>📦</span>
+
+                            <strong>
+                                mai<br>fast
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="floating toy1">
+                        🧸
+                    </div>
+
+                    <div class="floating toy2">
+                        ⭐
+                    </div>
+
+                    <div class="floating toy3">
+                        🃏
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- STAT CARDS -->
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        📦
+                    </div>
+
+                    <div>
+
+                        <small>
+                            สินค้าทั้งหมด
+                        </small>
+
+                        <strong id="homeProducts">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        🧸
+                    </div>
+
+                    <div>
+
+                        <small>
+                            สินค้าในคลัง
+                        </small>
+
+                        <strong id="homeStock">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        ⚠️
+                    </div>
+
+                    <div>
+
+                        <small>
+                            ใกล้หมด
+                        </small>
+
+                        <strong id="homeLowStock">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        💰
+                    </div>
+
+                    <div>
+
+                        <small>
+                            มูลค่าคลัง
+                        </small>
+
+                        <strong id="homeValue">
+                            ฿0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTS -->
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>
+                        ⭐ สินค้าขายดี
+                    </h2>
+
+                    <p>
+                        เลือกของที่ชอบแล้วเพิ่มลงตะกร้าได้เลย
+                    </p>
+
+                </div>
+
+                <button
+                    class="view-all"
+                    data-page="products">
+
+                    ดูทั้งหมด →
+
+                </button>
+
+            </div>
+
+
+            <div
+                id="homeProductsGrid"
+                class="product-grid">
+            </div>
+
+
+            <!-- BOTTOM AREA -->
+
+            <div class="home-bottom">
+
+
+                <!-- STOCK CHECK -->
+
+                <div class="cute-panel">
+
+                    <div class="panel-title">
+
+                        <div class="panel-icon">
+                            📦
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                เช็กจำนวนสินค้าในคลัง
+                            </h3>
+
+                            <small>
+                                ตรวจสอบสินค้าได้ทันที
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stock-search">
+
+                        <input
+                            id="homeStockSearch"
+                            type="text"
+                            placeholder="🔍 พิมพ์ชื่อสินค้า...">
+
+                        <button id="homeStockSearchBtn">
+                            ตรวจสอบ
+                        </button>
+
+                    </div>
+
+
+                    <div id="homeStockResult">
+                    </div>
+
+                </div>
+
+
+                <!-- SHIPPING -->
+
+                <div class="cute-panel">
+
+                    <div class="panel-title">
+
+                        <div class="panel-icon">
+                            🚚
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                เลือกวิธีจัดส่ง
+                            </h3>
+
+                            <small>
+                                คำนวณค่าจัดส่งให้ทันที
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="shipping-mini">
+
+                        <select id="homeShippingCompany">
+
+                            <option value="Flash">
+                                Flash Express
+                            </option>
+
+                            <option value="Kerry">
+                                Kerry Express
+                            </option>
+
+                            <option value="J&T">
+                                J&T Express
+                            </option>
+
+                            <option value="Thailand Post">
+                                ไปรษณีย์ไทย
+                            </option>
+
+                        </select>
+
+
+                        <input
+                            id="homeWeight"
+                            type="number"
+                            min="0.1"
+                            step="0.1"
+                            value="1"
+                            placeholder="น้ำหนัก">
+
+                        <button id="homeShippingCalculate">
+                            คำนวณ
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="homeShippingResult"
+                        class="mini-result">
+
+                        ค่าขนส่ง ฿0.00
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRODUCTS ================= -->
+
+        <section id="products" class="page">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h2>
+                        🧸 สินค้าทั้งหมด
+                    </h2>
+
+                    <p>
+                        กล่องสุ่ม การ์ด และของเล่น
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-toolbar">
+
+                <input
+                    id="productSearch"
+                    type="text"
+                    placeholder="🔍 ค้นหาสินค้า...">
+
+
+                <div class="category-buttons">
+
+                    <button
+                        class="category active"
+                        data-category="all">
+
+                        ทั้งหมด
+
+                    </button>
+
+                    <button
+                        class="category"
+                        data-category="การ์ด">
+
+                        🃏 การ์ด
+
+                    </button>
+
+                    <button
+                        class="category"
+                        data-category="กล่องสุ่ม">
+
+                        📦 กล่องสุ่ม
+
+                    </button>
+
+                    <button
+                        class="category"
+                        data-category="ของเล่น">
+
+                        🧸 ของเล่น
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="allProductsGrid"
+                class="product-grid large">
+            </div>
+
+        </section>
+
+
+        <!-- ================= INVENTORY ================= -->
+
+        <section id="inventory" class="page">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h2>
+                        📦 คลังสินค้า
+                    </h2>
+
+                    <p>
+                        ตรวจสอบและจัดการจำนวนสินค้า
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="inventory-summary">
+
+                <div>
+                    <span>สินค้าทั้งหมด</span>
+                    <strong id="inventoryTotalProducts">0</strong>
+                </div>
+
+                <div>
+                    <span>จำนวนชิ้น</span>
+                    <strong id="inventoryTotalStock">0</strong>
+                </div>
+
+                <div>
+                    <span>ใกล้หมด</span>
+                    <strong id="inventoryLowStock">0</strong>
+                </div>
+
+                <div>
+                    <span>หมดคลัง</span>
+                    <strong id="inventoryOutStock">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="cute-panel">
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>สินค้า</th>
+                                <th>ประเภท</th>
+                                <th>ราคา</th>
+                                <th>จำนวน</th>
+                                <th>สถานะ</th>
+                                <th>จัดการ</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="inventoryTable">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SHIPPING ================= -->
+
+        <section id="shipping" class="page">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h2>
+                        🚚 คำนวณค่าขนส่ง
+                    </h2>
+
+                    <p>
+                        คำนวณราคาจัดส่งตามน้ำหนักและระยะทาง
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="calculator-layout">
+
+
+                <div class="cute-panel calculator">
+
+                    <div class="calculator-icon">
+                        🚚
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            บริษัทขนส่ง
+                        </label>
+
+                        <select id="shippingCompany">
+
+                            <option value="Flash">
+                                Flash Express
+                            </option>
+
+                            <option value="Kerry">
+                                Kerry Express
+                            </option>
+
+                            <option value="J&T">
+                                J&T Express
+                            </option>
+
+                            <option value="Thailand Post">
+                                ไปรษณีย์ไทย
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="two-inputs">
+
+                        <div class="form-group">
+
+                            <label>
+                                น้ำหนัก (กก.)
+                            </label>
+
+                            <input
+                                id="shippingWeight"
+                                type="number"
+                                min="0.1"
+                                step="0.1"
+                                placeholder="เช่น 2.5">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                ระยะทาง (กม.)
+                            </label>
+
+                            <input
+                                id="shippingDistance"
+                                type="number"
+                                min="0"
+                                placeholder="เช่น 50">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            ประเภทการจัดส่ง
+                        </label>
+
+                        <select id="shippingType">
+
+                            <option value="normal">
+                                📦 ปกติ
+                            </option>
+
+                            <option value="express">
+                                ⚡ ด่วน
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        id="calculateShipping"
+                        class="main-button">
+
+                        🚚 คำนวณค่าขนส่ง
+
+                    </button>
+
+
+                    <div
+                        id="shippingResult"
+                        class="big-result">
+
+                        <span>
+                            ค่าขนส่ง
+                        </span>
+
+                        <strong>
+                            ฿0.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cute-panel info-box">
+
+                    <h3>
+                        🌿 วิธีคำนวณ
+                    </h3>
+
+                    <p>
+                        ระบบจะคำนวณจาก
+                    </p>
+
+                    <ul>
+
+                        <li>น้ำหนักสินค้า</li>
+
+                        <li>ระยะทาง</li>
+
+                        <li>บริษัทขนส่ง</li>
+
+                        <li>ประเภทการจัดส่ง</li>
+
+                    </ul>
+
+                    <div class="formula">
+                        ราคาเริ่มต้น + น้ำหนัก + ระยะทาง
+                        × ประเภทบริการ
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TAX ================= -->
+
+        <section id="tax" class="page">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h2>
+                        🧾 คำนวณภาษีและราคา
+                    </h2>
+
+                    <p>
+                        คำนวณยอดสุทธิอัตโนมัติ
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="calculator-layout">
+
+
+                <div class="cute-panel calculator">
+
+                    <div class="calculator-icon">
+                        🧮
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            ราคาสินค้า
+                        </label>
+
+                        <input
+                            id="taxProductPrice"
+                            type="number"
+                            min="0"
+                            placeholder="0">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            ค่าขนส่ง
+                        </label>
+
+                        <input
+                            id="taxShipping"
+                            type="number"
+                            min="0"
+                            value="0">
+
+                    </div>
+
+
+                    <div class="two-inputs">
+
+                        <div class="form-group">
+
+                            <label>
+                                ส่วนลด
+                            </label>
+
+                            <input
+                                id="taxDiscount"
+                                type="number"
+                                min="0"
+                                value="0">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                ภาษี (%)
+                            </label>
+
+                            <input
+                                id="taxRate"
+                                type="number"
+                                min="0"
+                                value="7">
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        id="calculateTax"
+                        class="main-button">
+
+                        🧮 คำนวณยอดรวม
+
+                    </button>
+
+                </div>
+
+
+                <div class="cute-panel tax-card">
+
+                    <h3>
+                        🧾 สรุปยอด
+                    </h3>
+
+
+                    <div class="price-row">
+
+                        <span>
+                            ราคาสินค้า
+                        </span>
+
+                        <strong id="taxResultProduct">
+                            ฿0.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="price-row">
+
+                        <span>
+                            ค่าขนส่ง
+                        </span>
+
+                        <strong id="taxResultShipping">
+                            ฿0.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="price-row">
+
+                        <span>
+                            ส่วนลด
+                        </span>
+
+                        <strong id="taxResultDiscount">
+                            -฿0.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="price-row">
+
+                        <span>
+                            ภาษี
+                        </span>
+
+                        <strong id="taxResultTax">
+                            ฿0.00
+                        </strong>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <div class="total-row">
+
+                        <span>
+                            ยอดสุทธิ
+                        </span>
+
+                        <strong id="taxGrandTotal">
+                            ฿0.00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ORDERS ================= -->
+
+        <section id="orders" class="page">
+
+            <div class="page-heading">
+
+                <div>
+
+                    <h2>
+                        📋 คำสั่งซื้อ
+                    </h2>
+
+                    <p>
+                        ประวัติการสั่งซื้อทั้งหมด
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="cute-panel">
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Order ID</th>
+                                <th>สินค้า</th>
+                                <th>ยอดรวม</th>
+                                <th>วันที่</th>
+                                <th>สถานะ</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="ordersTable">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= CART ================= -->
+
+    <div
+        id="cartOverlay"
+        class="overlay">
+
+        <div class="cart-drawer">
+
+            <div class="cart-header">
+
+                <div>
+
+                    <h2>
+                        🛒 ตะกร้าสินค้า
+                    </h2>
+
+                    <small>
+                        ตรวจสอบสินค้าก่อนชำระเงิน
+                    </small>
+
+                </div>
+
+                <button id="closeCart">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div
+                id="cartItems"
+                class="cart-items">
+            </div>
+
+
+            <div class="cart-summary">
+
+                <div class="price-row">
+
+                    <span>
+                        ราคาสินค้า
+                    </span>
+
+                    <strong id="cartSubtotal">
+                        ฿0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>
+                        ค่าขนส่ง
+                    </span>
+
+                    <strong id="cartShipping">
+                        ฿0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="price-row">
+
+                    <span>
+                        ภาษี 7%
+                    </span>
+
+                    <strong id="cartTax">
+                        ฿0.00
+                    </strong>
+
+                </div>
+
+
+                <hr>
+
+
+                <div class="total-row">
+
+                    <span>
+                        รวมทั้งหมด
+                    </span>
+
+                    <strong id="cartTotal">
+                        ฿0.00
+                    </strong>
+
+                </div>
+
+
+                <div class="cart-shipping-select">
+
+                    <label>
+                        🚚 เลือกขนส่ง
+                    </label>
+
+                    <select id="cartShippingCompany">
+
+                        <option value="Flash">
+                            Flash Express
+                        </option>
+
+                        <option value="Kerry">
+                            Kerry Express
+                        </option>
+
+                        <option value="J&T">
+                            J&T Express
+                        </option>
+
+                        <option value="Thailand Post">
+                            ไปรษณีย์ไทย
+                        </option>
+
+                    </select>
+
+
+                    <input
+                        id="cartDistance"
+                        type="number"
+                        min="0"
+                        value="20"
+                        placeholder="ระยะทาง (กม.)">
+
+                </div>
+
+
+                <button
+                    id="checkoutButton"
+                    class="checkout-button">
+
+                    🛍️ ยืนยันคำสั่งซื้อ
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div
+        id="toast"
+        class="toast">
+
+        <span id="toastText">
+            สำเร็จ
+        </span>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
